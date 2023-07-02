@@ -4,7 +4,7 @@ let myName = document.getElementById("name");
 let myTitle = document.getElementById("title");
 console.log(myName);
 function sizeUp() {
-    this.style.transform = "scale(1.5)";
+    this.style.transform = "scale(1.25)";
 }
 function sizeDown() {
     this.style.transform = 'scale(1)';
@@ -21,10 +21,12 @@ console.log(tech);
 function invertColor() {
     this.style.backgroundColor="rgba(105,109,125, 0.8)";
     this.style.color = "white";
+    this.style.border="2px double #FAF3DD";
 }
 function revertColor() {
     this.style.backgroundColor="rgba(250, 243, 221, 0.8)";
     this.style.color = "black";
+    this.style.border="2px double #696d7d";
 }
 tech.addEventListener("mouseenter", invertColor);
 tech.addEventListener("mouseleave", revertColor);
@@ -44,8 +46,9 @@ logo.addEventListener("mouseenter", logoHover);
 logo.addEventListener("mouseleave", logoNorm);
 
 //AJAX request for Random Fact filler
+let adviceBlock = document.getElementById("advBlock");
 function randomAdvice() {
-    let adviceBlock = document.getElementById("advBlock");
+    
     adviceBlock.innerHTML = "";
     $.ajax("https://api.adviceslip.com/advice",{
         success: function (response) {
@@ -59,3 +62,6 @@ function randomAdvice() {
 }
 
 randomAdvice();
+
+adviceBlock.addEventListener("mouseenter",sizeUp);
+adviceBlock.addEventListener("mouseleave",sizeDown);

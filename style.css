@@ -1,18 +1,28 @@
+/*fonts
+font-family: 'Loved by the King', cursive;
+font-family: 'Luckiest Guy', cursive;
+font-family: 'Space Grotesk', sans-serif;
+*/
 body {
     background-image: url("images/hossein-nasr-upward.jpg") ;
-    background-size: 100%;
+    background-size: auto 100%;
+    font-family: 'Loved by the King', cursive;
 }
 
 #logo {
     width: 200px;
     height: 65px;
-    margin: 5px;
+    margin: 2px 25px 2px 10px;
 }
 
 nav{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color:#696d7d;
     margin: 10px;
     padding: 5px;
@@ -22,32 +32,66 @@ nav{
 }
 button {
     background-color: #FAF3DD;
-}
-
-#home, #resume, #gallery, #contact {
-    align-items:baseline;
-    margin: 2px;
-    padding: 2px;
-}
-
-#nam, #portrait, #advice {
-    text-align: center;
-    background-color: rgba(200,213,185, 0.8);   
     
 }
 
+button:hover {
+    background-color: #68B0AB;
+    color: white;
+}
+
+#home, #resume, #gallery, #contact {
+    font-family: 'Luckiest Guy', cursive;
+    align-items:baseline;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 5px;
+}
+
+
+#topFiller {
+    height: 100px;
+}
+
+#nam, #portrait, #advice, .content {
+    text-align: center;
+    background-color: rgba(200,213,185, 0.9);  
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 10px 0px;
+    border: 5px double #696d7d;
+    border-radius: 10px; 
+    
+}
+
+#description {
+    padding: 10px 25px;
+}
+
+#pic {
+    border: 5px solid #68B0AB;
+    border-radius: 10px;
+}
+#advice {
+    padding: 5px 0px 20px 0px;
+}
 #tech, #soft, #hobb {
-    background-color: rgba(250, 243, 221, 0.8);
+    background-color: rgba(250, 243, 221, 0.9);
+    font-family: 'Space Grotesk', sans-serif;
+    padding: 10px 0px 10px 10px;
+    border: 5px double #696d7d;
+    border-radius: 10px;
 }
 
 footer {
-    text-align: left;
+    text-align: right;
     background-color:#696d7d;
     margin: 10px;
-    padding: 25px;
+    padding:  15px 50px;
     border-radius: 10px;
 }
 
 #gHubLink {
+    font-family:'Luckiest Guy', cursive;
+    font-size: large;
     color: white;
 }
